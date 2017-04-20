@@ -1,5 +1,5 @@
 === Gallery Sharing ===
-Contributors: edwardbock
+Contributors: palasthotel, edwardbock
 Donate link: http://palasthotel.de/
 Tags: gallery, sharing
 Requires at least: 4.0
