@@ -6,9 +6,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       PALASTHOTEL Gallery Sharing
- * Description:       This Plugin provides a way to share Galleries between WordPress instances
- * Version:           1.0
+ * Description:       DEPRECATED - no longer maintained. Shared galleries between WordPress instances. Please deactivate and delete.
+ * Version:           1.0.1
  * Author:            PALASTHOTEL by Edward Bock
+ * License:           GPL-3.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  */
 
 // If this file is called directly, abort.
