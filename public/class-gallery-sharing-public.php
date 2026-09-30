@@ -193,7 +193,13 @@ class Gallery_Sharing_Public {
 			die('Could not find gallery!'); }
 		global $post;
 		$post = get_post( $post_id, OBJECT );
-		if ( $post != null && 'gallery' == get_post_format( $post_id ) ){
+		// Only expose published galleries. Without this, the unauthenticated
+		// get endpoint rendered draft, pending and private galleries to anyone,
+		// because get_post() returns a post regardless of status. Logged-in
+		// users who may read the post (e.g. an editor previewing) still see it.
+		$may_view = $post != null
+			&& ( 'publish' === get_post_status( $post ) || current_user_can( 'read_post', $post_id ) );
+		if ( $may_view && 'gallery' == get_post_format( $post_id ) ){
 			setup_postdata($post);
 			// render the gallery before printing
 			print "<!-- gallery sharing start -->\n";
